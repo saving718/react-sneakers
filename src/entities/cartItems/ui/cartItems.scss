@@ -1,0 +1,10 @@
+.b-cart-items {
+    width: 100%;
+    .cart-items {
+        &__wrap {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+    }
+}
