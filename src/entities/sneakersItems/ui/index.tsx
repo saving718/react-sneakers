@@ -5,9 +5,9 @@ import Cartitem from "widgets/cartItem";
 import Sorting from "shared/ui/sorting";
 import SelectCategory from "shared/ui/selectCategory";
 import Pagination from "shared/ui/pagination";
-import { cardItemType } from "widgets/cartItem/model/state/cartSlice";
+import { cardItemType } from "widgets/cartItem";
 
-export default function SneakersItems() {
+const SneakersItems = () => {
 	const [sneakers, setSneakers] = React.useState<cardItemType[]>([]);
 	const [sneakerslength, setSneakersLength] = React.useState("0");
 	const [sortValue, setSortValue] = React.useState("");
@@ -48,4 +48,5 @@ export default function SneakersItems() {
 			<Pagination handlePageClick={handlePageClick} pageCount={pageCount} />
 		</div>
 	);
-}
+};
+export default SneakersItems;

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "app/assets/image/logo.png";
 import "./logo.scss";
 
-export default function Logo() {
+const Logo = () => {
 	return (
 		<div className="b-logo">
 			<Link className="logo__link" to="/">
@@ -12,4 +12,5 @@ export default function Logo() {
 			</Link>
 		</div>
 	);
-}
+};
+export default Logo;

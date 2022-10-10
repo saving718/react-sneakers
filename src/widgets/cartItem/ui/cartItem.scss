@@ -47,6 +47,10 @@
             color: #fff;
             user-select: none;
             cursor: pointer;
+            transition: background-color 0.3s;
+            &:hover {
+                background-color: #51eb19d3;
+            }
             @media screen and (max-width: 600px) {
                 padding: 10px 15px;
                 font-size: 12px;
@@ -64,6 +68,10 @@
             color: #fff;
             user-select: none;
             cursor: pointer;
+            transition: background-color 0.3s;
+            &:hover {
+                background-color: #df4343de;
+            }
             @media screen and (max-width: 600px) {
                 padding: 10px 10px;
                 font-size: 12px;

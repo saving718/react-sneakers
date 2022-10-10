@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { RootState } from "widgets/cartItem/model/state/store";
+import { RootState } from "widgets/cartItem";
 
 type itemButtonProps = {
 	id: number;

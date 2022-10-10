@@ -1,5 +1,5 @@
 import axios from "axios";
-import { cardItemType } from "widgets/cartItem/model/state/cartSlice";
+import { cardItemType } from "widgets/cartItem";
 
 export type GetCardsParams = {
     selectedPage: number,

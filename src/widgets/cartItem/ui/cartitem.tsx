@@ -24,7 +24,7 @@ const Cartitem: React.FC<cartItemProps> = ({ item }) => {
 			<div className="card__wrap">
 				<div className="card__top">
 					<div className="card__image">
-						<img src={require(`app/assets/image/${item.image}`)} alt="sneaker" />
+						<img src={require(`app/assets/image/sneakers/${item.image}`)} alt="sneaker" />
 					</div>
 				</div>
 				<div className="card__bottom">

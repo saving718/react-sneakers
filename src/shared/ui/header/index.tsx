@@ -3,7 +3,7 @@ import "./header.scss";
 import HeaderCart from "features/headerCart/ui";
 import Logo from "shared/ui/logo";
 
-export default function Header() {
+const Header = () => {
 	return (
 		<div className="l-header">
 			<div className="header__wrap">
@@ -12,4 +12,5 @@ export default function Header() {
 			</div>
 		</div>
 	);
-}
+};
+export default Header;
