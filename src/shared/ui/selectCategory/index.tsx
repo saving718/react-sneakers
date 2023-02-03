@@ -1,11 +1,12 @@
 import React from "react";
-import "./selectCategory.scss";
+import "./selectCategory.module.scss";
 
 type selectCategoryProps = {
 	selectCategory: (vakue: string) => void;
 }
 
 const SelectCategory:React.FC<selectCategoryProps> = ({ selectCategory }) => {
+	
 	type CategoryItem = {
 		id: React.Key;
 		name: string;

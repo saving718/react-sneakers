@@ -4,7 +4,7 @@ import Cartitem from "widgets/cartItem/ui/cartitem";
 import EmptyBusket from "shared/ui/emptyBusket";
 import { cardItemType } from "widgets/cartItem";
 import { RootState } from "widgets/cartItem";
-import "./cartItems.scss";
+import "./cartItems.module.scss";
 
 const CartItems = () => {
 	const cardsSelect: cardItemType[] = useSelector((state: RootState) => state.cart.cardsInCart);

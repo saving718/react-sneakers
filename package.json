@@ -58,6 +58,7 @@
     "redux-persist": "^6.0.0",
     "resolve": "^1.20.0",
     "resolve-url-loader": "^4.0.0",
+    "sass": "^1.55.0",
     "sass-loader": "^12.3.0",
     "semver": "^7.3.5",
     "source-map-loader": "^3.0.0",
@@ -72,7 +73,7 @@
   },
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run start\"",
-    "start": "node scripts/start.js",
+    "start": "next dev",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "server": "json-server --w src/shared/lib/utils/sneakers.json --port 3002"

@@ -1,6 +1,6 @@
 import React from "react";
 import { getCards } from "shared/api/cards";
-import "./sneakersItems.scss";
+import "./sneakersItems.module.scss";
 import Cartitem from "widgets/cartItem";
 import Sorting from "shared/ui/sorting";
 import SelectCategory from "shared/ui/selectCategory";

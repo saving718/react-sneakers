@@ -1,6 +1,6 @@
 import React from "react";
 import busket from "app/assets/image/busket-empty.svg";
-import "./emptyBusket.scss";
+import "./emptyBusket.module.scss";
 
 const EmptyBusket = () => {
 	return (

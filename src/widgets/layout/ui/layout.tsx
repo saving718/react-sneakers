@@ -1,15 +1,14 @@
-import React from "react";
-import Header from "widgets/header/ui/header";
+import React, { ReactElement } from "react";
+import Header from "shared/ui/header";
 import "./layout.scss";
-import { Outlet } from "react-router";
 
-export function Layout() {
+export function Layout({children}: any) {
 	return (
 		<div className="l-page">
 			<Header />
 			<div className="l-main">
 				<div className="main__wrap">
-					<Outlet />
+					<main>{ children }</main>
 				</div>
 			</div>
 		</div>

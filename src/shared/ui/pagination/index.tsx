@@ -1,6 +1,6 @@
 import React from "react";
 import ReactPaginate from "react-paginate";
-import "./pagination.scss";
+import "./pagination.module.scss";
 
 type paginationProps = {
 	handlePageClick: (e: { selected: number }) => void;
