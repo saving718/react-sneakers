@@ -1,26 +1,25 @@
-.b-empty-busket {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 0 80px;
-    user-select: none;
-    .empty-busket {
-        &__image {
-            width: 250;
-            height: 250px;
-            margin-bottom: 25px;
-            @media screen and (max-width: 768px) {
-                width: 125px;
-                height: 125px;
-            }
-        }
-        &__text {
-            text-align: center;
-            font-size: 32px;
-            font-weight: 600;
-            @media screen and (max-width: 768px) {
-                font-size: 18px;
-            }
-        }
-    }
+.empty-busket {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 50px 0 80px;
+	user-select: none;
+	&__image {
+		width: 250px;
+		height: 250px;
+        position: relative;
+		margin-bottom: 25px;
+		@media screen and (max-width: 768px) {
+			width: 125px;
+			height: 125px;
+		}
+	}
+	&__text {
+		text-align: center;
+		font-size: 32px;
+		font-weight: 600;
+		@media screen and (max-width: 768px) {
+			font-size: 18px;
+		}
+	}
 }

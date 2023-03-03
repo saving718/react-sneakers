@@ -1,23 +1,21 @@
-.b-pagination {
-    padding-bottom: 20px;
-    ul {
-        display: flex;
-        li {
-            user-select: none;
-            margin-right: 10px;
-            list-style-type: none;
-        };
-        li.selected {
-            a {
-                background-color: #5E4BD8;
-                color: #fff;
-            }
-        }
-        a {
-            cursor: pointer;
-            font-weight: 500;
-            padding: 5px 10px;
-            color: #000
-        }
-    }
+.pagination {
+	padding-bottom: 20px;
+	ul {
+		display: flex;
+		li {
+			user-select: none;
+			margin-right: 10px;
+			list-style-type: none;
+		}
+		a[aria-current="page"] {
+			background-color: #5e4bd8;
+			color: #fff;
+		}
+		a {
+			cursor: pointer;
+			font-weight: 500;
+			padding: 5px 10px;
+			color: #000;
+		}
+	}
 }

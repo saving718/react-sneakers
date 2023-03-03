@@ -1,6 +1,14 @@
-import CartItems from "entities/cartItems/ui";
+import CartItems from "widgets/cartItems/ui";
+import Head from "next/head";
 
 const CartPage = () => {
-	return <CartItems />;
+	return (
+		<div>
+			<Head>
+				<title>Cart</title>
+			</Head>
+			<CartItems />
+		</div>
+	);
 };
 export default CartPage;

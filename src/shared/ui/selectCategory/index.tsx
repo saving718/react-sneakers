@@ -1,5 +1,5 @@
 import React from "react";
-import "./selectCategory.module.scss";
+import styles from "./selectCategory.module.scss";
 
 type selectCategoryProps = {
 	selectCategory: (vakue: string) => void;
@@ -21,19 +21,19 @@ const SelectCategory:React.FC<selectCategoryProps> = ({ selectCategory }) => {
 	];
 
 	return (
-		<div className="b-category">
-			<div className="category__wrap">
-				<div className="category__list">
+		<div className={styles["category"]}>
+			<div className={styles["category__wrap"]}>
+				<div className={styles["category__list"]}>
 					{category.map((item, i) => (
-						<div className="category__item" key={item.id}>
+						<div className={styles["category__item"]} key={item.id}>
 							<input
-								className="category__button"
+								className={styles["category__button"]}
 								type="radio"
 								name="category"
 								defaultChecked={i === 0}
 								onClick={() => selectCategory(item.value)}
 							></input>
-							<div className="category__name">{item.name}</div>
+							<div className={styles["category__name"]}>{item.name}</div>
 						</div>
 					))}
 				</div>

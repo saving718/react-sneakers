@@ -1,15 +1,15 @@
 import React from "react";
+import styles from "./sorting.module.scss";
 import Select from "react-select";
-import "./sorting.module.scss";
 
 type sortSneakersProps = {
 	sortSneakers: (value: string) => void;
-}
-const Sorting:React.FC<sortSneakersProps> = ({ sortSneakers }) => {
+};
+const Sorting: React.FC<sortSneakersProps> = ({ sortSneakers }) => {
 	type sortingItemsType = {
-		label: string,
-		value: string
-	}
+		label: string;
+		value: string;
+	};
 	const sortingItems: sortingItemsType[] = [
 		{
 			label: "Highest price",
@@ -33,10 +33,11 @@ const Sorting:React.FC<sortSneakersProps> = ({ sortSneakers }) => {
 			sortSneakers(option.value);
 		}
 	};
-	
+
 	return (
-		<div className="b-sorting">
+		<div className={styles["sorting"]}>
 			<Select
+				instanceId={React.useId()}
 				options={sortingItems}
 				onChange={onChangeSelect}
 				defaultValue={sortingItems[0]}

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactPaginate from "react-paginate";
-import "./pagination.module.scss";
+import styles from "./pagination.module.scss";
 
 type paginationProps = {
 	handlePageClick: (e: { selected: number }) => void;
@@ -9,7 +9,7 @@ type paginationProps = {
 
 const Pagination:React.FC<paginationProps> = ({ handlePageClick, pageCount }) => {
 	return (
-		<div className="b-pagination">
+		<div className={styles["pagination"]}>
 			<ReactPaginate
 				breakLabel="..."
 				nextLabel=">"

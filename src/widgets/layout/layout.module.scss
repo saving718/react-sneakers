@@ -1,0 +1,10 @@
+.page {
+	max-width: 1360px;
+	margin: 0 auto;
+	background: #fff;
+}
+.main {
+	&__wrap {
+		padding: 0 20px;
+	}
+}
