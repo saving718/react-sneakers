@@ -8,9 +8,9 @@ class TimeLoggerPlugin {
 	apply(compiler) {
 		compiler.hooks.watchRun.tap(PLUGIN_NAME, (compiler) => {
 			if (this.isServer) {
-				console.log(chalk.green(`Compilation Done ${new Date().toLocaleString()} on server`));
+				console.log(chalk.green(`Compilation server done ${new Date().toLocaleString()}`));
 			} else {
-                console.log(chalk.green(`Compilation Done ${new Date().toLocaleString()} on client`));
+                console.log(chalk.green(`Compilation client done ${new Date().toLocaleString()}`));
             }
 		});
 	}

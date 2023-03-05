@@ -10,6 +10,7 @@ ____
 - ESlint
 - SCSS
 - TypeScript
+- Next
 ## 🛠️Архитектура
 ___
 **Feature-Sliced Design (FSD)** - архитектурная методология для более правильного и понятного структурирования проекта.
@@ -31,6 +32,7 @@ ___
 - ESlint
 - SCSS
 - TypeScript
+- Next
  ## 🛠️ Architecture
 ___
 **Feature-Sliced Design (FSD)** is an architectural methodology for more correct and understandable structuring of the project.
