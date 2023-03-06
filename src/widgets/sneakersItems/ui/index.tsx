@@ -9,15 +9,18 @@ import { cardItemType } from "entities/cartItem";
 import { useRouter, Router } from "next/router";
 import NProgress from "nprogress";
 import Preloader from "shared/ui/preloader";
-
-const SneakersItems = ({ sneakersSEO, lenSneakers }: any) => {
+interface sneakersItemsProps {
+	sneakersSEO: cardItemType[], 
+	lenSneakers: number
+}
+const SneakersItems: React.FC<sneakersItemsProps> = ({ sneakersSEO, lenSneakers }) => {
 	const router = useRouter();
 	const [loading, setLoading] = React.useState(false);
 	const [sortValue, setSortValue] = React.useState("");
 	const [category, setCategory] = React.useState("");
 	const [selectedPage, setSelectedPage] = React.useState(1);
 	const limitSneakers = 4;
-	const pageCount: number = parseInt(lenSneakers) / limitSneakers;
+	const pageCount: number = lenSneakers / limitSneakers;
 
 	const sortSneakers = (value: string) => {
 		setSortValue(value);
@@ -37,7 +40,7 @@ const SneakersItems = ({ sneakersSEO, lenSneakers }: any) => {
 		router.push(url);
 	}, [selectedPage, category, sortValue]);
 
-	Router.events.on("routeChangeStart", (url) => {
+	Router.events.on("routeChangeStart", () => {
 		NProgress.start();
 		setLoading(false);
 	});
@@ -58,7 +61,7 @@ const SneakersItems = ({ sneakersSEO, lenSneakers }: any) => {
 					))}
 				</div>
 			) : (
-				<Preloader height="335"/>
+				<Preloader height={335} />
 			)}
 			<Pagination handlePageClick={handlePageClick} pageCount={pageCount} />
 		</div>
