@@ -11,7 +11,7 @@ interface cardProps  {
 }
 
 const Card: React.FC<cardProps> = ({ item }) => {
-
+	
 	const dispatch = useDispatch();
 	const addCardInCart = () => {		
 		dispatch(addCard(item));

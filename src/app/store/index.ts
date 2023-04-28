@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import cartReducer from "./cartSlice";
+import {cartReducer} from "entities/cartItem";
 import {
 	persistStore,
 	persistReducer,
@@ -33,7 +33,7 @@ const store: any = configureStore({
 });
 const makeStore = () => {
 	const isServer = typeof window === "undefined";
-
+	
 	if (isServer) {
 		return store;
 	} else {

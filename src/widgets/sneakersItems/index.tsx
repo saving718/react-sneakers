@@ -2,13 +2,11 @@ import React from "react";
 import dynamic from "next/dynamic";
 import styles from "./sneakersItems.module.scss";
 const Card = dynamic(() => import("entities/cartItem"));
-import Sorting from "shared/ui/sorting";
-import SelectCategory from "shared/ui/selectCategory";
-import Pagination from "shared/ui/pagination";
 import { cardItemType } from "entities/cartItem";
 import { useRouter, Router } from "next/router";
 import NProgress from "nprogress";
-import Preloader from "shared/ui/preloader";
+import { Pagination, Preloader, SelectCategory, Sorting } from "shared/ui";
+
 interface sneakersItemsProps {
 	sneakersSEO: cardItemType[], 
 	lenSneakers: number

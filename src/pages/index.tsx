@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import SneakersItems from "widgets/sneakersItems/ui";
+import SneakersItems from "widgets/sneakersItems";
 import axios from "axios";
 
 const MainPage = ({ sneakers, lenSneakers }: any) => {

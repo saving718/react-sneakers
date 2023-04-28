@@ -3,16 +3,17 @@ import dynamic from "next/dynamic";
 import { useSelector } from "react-redux";
 const Card = dynamic(() => import("entities/cartItem"));
 
-import EmptyBusket from "shared/ui/emptyBusket";
+
 import { cardItemType } from "entities/cartItem";
-import { RootState } from "entities/cartItem";
+import { RootState } from "app/store";
 import styles from "./cartItems.module.scss";
+import { EmptyBusket } from "shared/ui";
 
 const CartItems = () => {
 	const cardsSelect: cardItemType[] = useSelector(
 		(state: RootState) => state.cart.cardsInCart
 	);
-
+	
 	return (
 		<div className={styles["cart-items"]}>
 			{cardsSelect.length ? (

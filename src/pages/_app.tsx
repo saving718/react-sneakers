@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/lib/integration/react";
-import { wrapper } from "entities/cartItem/model/state/store";
+import { wrapper } from "app/store";
 import { Layout } from "widgets/layout";
 import "app/styles/index.scss";
 import { Router } from "next/router";
