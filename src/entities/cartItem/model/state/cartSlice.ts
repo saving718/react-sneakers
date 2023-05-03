@@ -10,10 +10,12 @@ export interface cardItemType {
 }
 interface cartSlice {
 	fullPrice: number;
+	prevPrice: number;
 	cardsInCart: cardItemType[];
 }
 const initialState: cartSlice = {
 	fullPrice: 0,
+	prevPrice: 0,
 	cardsInCart: [],
 };
 
@@ -23,12 +25,14 @@ const cartSlice = createSlice({
 	reducers: {
 		addCard: (state, action: PayloadAction<cardItemType>) => {
 			state.cardsInCart.push(action.payload);
+			state.prevPrice = state.fullPrice;
 			state.fullPrice += action.payload.price;
 		},
 		delCard: (state, action: PayloadAction<cardItemType>) => {
 			state.cardsInCart = state.cardsInCart.filter(
 				(card) => card.id !== action.payload.id
 			);
+			state.prevPrice = state.fullPrice;
 			state.fullPrice -= action.payload.price;
 		},
 	},

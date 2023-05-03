@@ -7,31 +7,22 @@ import anime from "animejs";
 import cart from "app/assets/image/cart.png";
 
 const HeaderCart = () => {
+
 	const selectPrice: string = useSelector((state: any) => state.cart.fullPrice);
-	const animation = React.useRef(null);
-	const selectPriceRef = React.useRef(null);
+	const prevPrice: string = useSelector((state: any) => state.cart.prevPrice);
+
+	const animationRef = React.useRef(null);
 	
-	const [price1, setPrice1] = React.useState(1);
 	React.useEffect(() => {
-		animation.current = anime.timeline({
-			direction: "alternate",
+		animationRef.current = anime({
+			targets: `.${styles["cart__price"]}`,
 			loop: false,
-			autoplay: true,
-			easing: "easeInOutSine"
-		  });
-		  
-		animation.current.add({
-			targets: selectPrice,
-			price: selectPrice,
-			round: 1,
+			direction: "alternate",
 			easing: "linear",
-			update: function() {
-				setPrice1(selectPrice);
-			}
+			innerHTML: [prevPrice, selectPrice],
+			round: 1,
+			duration: 500
 		});
-		
-		console.log(animation);
-		
 	}, [selectPrice]);
 
 	return (
@@ -48,9 +39,7 @@ const HeaderCart = () => {
 								height="28px"
 							/>
 						</span>
-						<span ref={selectPriceRef} className={styles["cart__price"]}>
-							{JSON.stringify(price1)}
-						</span>
+						<span className={styles["cart__price"]}>{selectPrice}</span>
 					</a>
 				</Link>
 			</div>
