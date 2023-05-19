@@ -5,6 +5,7 @@ import { addCard, delCard } from "entities/cartItem";
 import { cardItemType } from "entities/cartItem";
 import ItemButton from "entities/cartItem/ui/itemButton";
 import styles from "./cartItem.module.scss";
+import anime from "animejs";
 
 interface cardProps  {
 	item: cardItemType
@@ -20,6 +21,19 @@ const Card: React.FC<cardProps> = ({ item }) => {
 		dispatch(delCard(item));
 	};
 
+	const animationRef = React.useRef(null);
+	
+	React.useEffect(() => {
+		animationRef.current = anime({
+			targets: `.${styles["card"]}`,
+			loop: false,
+			direction: "alternate",
+			easing: "linear",
+			translateY: [-500, 0],
+			duration: 400
+		});
+	}, [item]);
+
 	return (
 		<div className={styles["card"]}>
 			<div className={styles["card__container"]}>
@@ -31,7 +45,6 @@ const Card: React.FC<cardProps> = ({ item }) => {
 								alt={item.brand}
 								objectFit='contain'
 								layout='fill'
-								placeholder="blur"
 							/>
 						</div>
 					</div>

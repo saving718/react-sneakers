@@ -1,6 +1,7 @@
 .cart-items {
 	width: 100%;
 	&__wrap {
+		overflow: hidden;
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;

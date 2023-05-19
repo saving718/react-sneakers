@@ -3,6 +3,7 @@
     position: relative;
     .sneakers-items {
         &__wrap {
+            overflow: hidden;
             display: flex;
             flex-wrap: wrap;
             width: 100%;
