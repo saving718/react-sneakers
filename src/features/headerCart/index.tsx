@@ -21,7 +21,7 @@ const HeaderCart = () => {
 			easing: "linear",
 			innerHTML: [prevPrice, selectPrice],
 			round: 1,
-			duration: 500
+			duration: 300
 		});
 	}, [selectPrice]);
 

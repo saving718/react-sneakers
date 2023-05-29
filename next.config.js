@@ -26,8 +26,8 @@ module.exports = {
 		{ dev, dir, outDir, distDir, buildId }
 	) {
 		return {
-			"/": { page: "/", query: { title: "color" } },
-			"/cart": { page: "/cart", query: { __nextDefaultLocale: "en" } },
+			"/": { page: "/", query: { __nextDefaultLocale: "en", _page: Number } },
+			"/cart": { page: "/cart",  },
 		};
 	},
 };

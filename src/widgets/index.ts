@@ -1,1 +1,1 @@
-export { default as SneakersItems } from "./sneakersItems"
+export { default as SneakersItems } from "./sneakersItems";
